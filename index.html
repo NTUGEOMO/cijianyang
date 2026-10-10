@@ -993,8 +993,26 @@
         max-height: 230px;
         overflow-y: auto;
         padding-right: 14px;
-        scrollbar-color: #b8c5d4 transparent;
+        scrollbar-color: rgba(104, 127, 153, 0.35) transparent;
         scrollbar-width: thin;
+      }
+      .news-list:hover,
+      .photo-track:hover {
+        scrollbar-color: rgba(104, 127, 153, 0.9) transparent;
+      }
+      .news-list::-webkit-scrollbar,
+      .photo-track::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      .news-list::-webkit-scrollbar-thumb,
+      .photo-track::-webkit-scrollbar-thumb {
+        background: rgba(104, 127, 153, 0.35);
+        transition: background 160ms ease;
+      }
+      .news-list:hover::-webkit-scrollbar-thumb,
+      .photo-track:hover::-webkit-scrollbar-thumb {
+        background: rgba(104, 127, 153, 0.9);
       }
       .news-item p {
         margin: 0;
@@ -1049,6 +1067,8 @@
         scroll-behavior: smooth;
         overscroll-behavior-inline: contain;
         padding-bottom: 10px;
+        scrollbar-color: rgba(104, 127, 153, 0.35) transparent;
+        scrollbar-width: thin;
       }
       .photo-track figure {
         margin: 0;
@@ -1059,12 +1079,41 @@
         width: 100%;
         aspect-ratio: 4 / 3;
         object-fit: cover;
+        cursor: zoom-in;
       }
-      .photo-track::-webkit-scrollbar {
-        height: 8px;
+      .photo-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        display: grid;
+        place-items: center;
+        padding: 70px 24px 24px;
+        background: rgba(7, 17, 30, 0.9);
       }
-      .photo-track::-webkit-scrollbar-thumb {
-        background: #b8c5d4;
+      .photo-lightbox[hidden] {
+        display: none;
+      }
+      .photo-lightbox img {
+        max-width: min(94vw, 1600px);
+        max-height: 84vh;
+        object-fit: contain;
+        cursor: zoom-out;
+      }
+      .photo-lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        font-size: 30px;
+        line-height: 1;
+      }
+      body.lightbox-open {
+        overflow: hidden;
       }
       @media (max-width: 600px) {
         .news-item {
@@ -2878,6 +2927,23 @@
         </div>
       </section>
     </main>
+    <div
+      class="photo-lightbox"
+      id="photo-lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="放大活動照片"
+      hidden
+    >
+      <button
+        class="photo-lightbox-close"
+        type="button"
+        aria-label="關閉放大照片"
+      >
+        ×
+      </button>
+      <img id="photo-lightbox-image" src="" alt="" />
+    </div>
     <footer>
       <div class="wrap foot">
         <span>© 2026 Ci-Jian Yang · Surface Processes &amp; Landforms</span
@@ -2908,6 +2974,50 @@
             behavior: "smooth",
           });
         });
+      });
+
+      const photoLightbox = document.getElementById("photo-lightbox");
+      const photoLightboxImage = document.getElementById(
+        "photo-lightbox-image",
+      );
+      const photoLightboxClose = document.querySelector(
+        ".photo-lightbox-close",
+      );
+      let previouslyFocusedElement;
+      const closePhotoLightbox = () => {
+        photoLightbox.hidden = true;
+        photoLightboxImage.src = "";
+        document.body.classList.remove("lightbox-open");
+        previouslyFocusedElement?.focus();
+      };
+      const openPhotoLightbox = (image) => {
+        previouslyFocusedElement = document.activeElement;
+        photoLightboxImage.src = image.currentSrc || image.src;
+        photoLightboxImage.alt = image.alt;
+        photoLightbox.hidden = false;
+        document.body.classList.add("lightbox-open");
+        photoLightboxClose.focus();
+      };
+      document.querySelectorAll(".photo-track img").forEach((image) => {
+        image.tabIndex = 0;
+        image.setAttribute("role", "button");
+        image.setAttribute("aria-label", `${image.alt}，點擊放大`);
+        image.addEventListener("click", () => openPhotoLightbox(image));
+        image.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openPhotoLightbox(image);
+          }
+        });
+      });
+      photoLightboxClose.addEventListener("click", closePhotoLightbox);
+      photoLightbox.addEventListener("click", (event) => {
+        if (event.target === photoLightbox) closePhotoLightbox();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !photoLightbox.hidden) {
+          closePhotoLightbox();
+        }
       });
     </script>
   </body>
