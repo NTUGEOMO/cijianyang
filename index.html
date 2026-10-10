@@ -515,12 +515,19 @@
         overflow: hidden;
         background: #4a5143;
       }
-      .landscape > img {
+      .landscape .cover-slide {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center 47%;
         display: block;
+        opacity: 0;
+        transition: opacity 1.4s ease-in-out;
+      }
+      .landscape .cover-slide.is-active {
+        opacity: 1;
       }
       .landscape:after {
         content: "";
@@ -534,12 +541,12 @@
         pointer-events: none;
       }
       .landscape-copy {
-        position: relative;
+        position: absolute;
+        inset: 0;
         z-index: 1;
         color: white;
         max-width: 1190px;
         margin: auto;
-        top: -100%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -744,7 +751,7 @@
           font-size: 27px;
         }
       }
-      .landscape > img {
+      .landscape .cover-slide {
         object-position: center 70%;
       }
       .publication-all {
@@ -1173,10 +1180,35 @@
     <main id="main">
       <div class="landscape">
         <img
-          src="badlands.jpg"
-          alt="臺灣高雄田寮月世界泥岩惡地，侵蝕溝與稜線交錯的地景"
-          width="2560"
-          height="1920"
+          class="cover-slide is-active"
+          src="cover/16FE867E-A4E4-4213-A417-E3794CECBB22.jpg"
+          alt=""
+        />
+        <img
+          class="cover-slide"
+          src="cover/1E2F152F-4630-4F0E-8E88-ABB13547E6E2.jpg"
+          alt=""
+        />
+        <img
+          class="cover-slide"
+          src="cover/2014AFFD-2DBD-477F-B927-0DACE55C5CDF.jpg"
+          alt=""
+        />
+        <img
+          class="cover-slide"
+          src="cover/29D75DB5-A058-44EF-8DD2-A71CFD4CA2C5.jpg"
+          alt=""
+        />
+        <img
+          class="cover-slide"
+          src="cover/8FD898FA-3988-4773-A074-417EFD739A32.jpg"
+          alt=""
+        />
+        <img class="cover-slide" src="cover/badlands.jpg" alt="" />
+        <img
+          class="cover-slide"
+          src="cover/E310AFEF-57EB-40A2-8017-FB588C425261.jpg"
+          alt=""
         />
         <div class="landscape-copy wrap">
           <p
@@ -1196,20 +1228,10 @@
       </div>
       <div class="wrap">
         <div class="image-credit">
-          <a
-            href="https://commons.wikimedia.org/wiki/File:Tianliao_Moon_World_1.jpg"
-            target="_blank"
-            rel="noopener"
-            >Tianliao Moon World · Black9869184</a
-          >
-          ·
-          <a
-            href="https://creativecommons.org/licenses/by-sa/4.0/"
-            target="_blank"
-            rel="noopener"
-            >CC BY-SA 4.0</a
-          ><span data-zh=" · 版面裁切" data-en=" · Display cropped">
-            · 版面裁切</span
+          <span
+            data-zh="封面照片每 5 秒自動切換"
+            data-en="Cover photos change automatically every 5 seconds"
+            >封面照片每 5 秒自動切換</span
           >
         </div>
         <div class="research-intro">
@@ -3017,6 +3039,19 @@
           closePhotoLightbox();
         }
       });
+
+      const coverSlides = [...document.querySelectorAll(".cover-slide")];
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      let activeCoverSlide = 0;
+      if (coverSlides.length > 1 && !reduceMotion) {
+        window.setInterval(() => {
+          coverSlides[activeCoverSlide].classList.remove("is-active");
+          activeCoverSlide = (activeCoverSlide + 1) % coverSlides.length;
+          coverSlides[activeCoverSlide].classList.add("is-active");
+        }, 5000);
+      }
     </script>
   </body>
 </html>
