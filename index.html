@@ -321,6 +321,15 @@
         grid-template-columns: 1fr 1fr;
         gap: 0 50px;
       }
+      .course-group + .course-group {
+        margin-top: 42px;
+      }
+      .course-group h3 {
+        margin: 0 0 16px;
+        color: var(--blue);
+        font-size: 20px;
+        font-weight: 600;
+      }
       .course {
         padding: 19px 0;
         border-top: 1px solid var(--line);
@@ -2586,51 +2595,64 @@
               >從基礎概念到野外與計算方法</span
             >
           </div>
-          <div class="course-grid">
-            <div class="course">
-              <strong
-                data-zh="自然地理學通論"
-                data-en="Introduction to Physical Geography"
-                >自然地理學通論</strong
-              ><span>Introduction to Physical Geography</span>
+          <div class="course-group">
+            <h3 data-zh="基礎概念" data-en="Fundamentals">基礎概念</h3>
+            <div class="course-grid">
+              <div class="course">
+                <strong
+                  data-zh="自然地理學通論"
+                  data-en="Introduction to Physical Geography"
+                  >自然地理學通論</strong
+                ><span>Introduction to Physical Geography</span>
+              </div>
+              <div class="course">
+                <strong data-zh="地形學及實習" data-en="Geomorphology and Lab"
+                  >地形學及實習</strong
+                ><span>Geomorphology and Lab</span>
+              </div>
+              <div class="course">
+                <strong
+                  data-zh="集水區地形學"
+                  data-en="Drainage Basin Geomorphology"
+                  >集水區地形學</strong
+                ><span>Drainage Basin Geomorphology</span>
+              </div>
             </div>
-            <div class="course">
-              <strong data-zh="地形學及實習" data-en="Geomorphology and Lab"
-                >地形學及實習</strong
-              ><span>Geomorphology and Lab</span>
+          </div>
+          <div class="course-group">
+            <h3 data-zh="野外實習" data-en="Field practice">野外實習</h3>
+            <div class="course-grid">
+              <div class="course">
+                <strong data-zh="野外地形學" data-en="Field Geomorphology"
+                  >野外地形學</strong
+                ><span>Field Geomorphology</span>
+              </div>
             </div>
-            <div class="course">
-              <strong
-                data-zh="集水區地形學"
-                data-en="Drainage Basin Geomorphology"
-                >集水區地形學</strong
-              ><span>Drainage Basin Geomorphology</span>
-            </div>
-            <div class="course">
-              <strong data-zh="野外地形學" data-en="Field Geomorphology"
-                >野外地形學</strong
-              ><span>Field Geomorphology</span>
-            </div>
-            <div class="course">
-              <strong
-                data-zh="程式設計（英文授課）"
-                data-en="Programming (English)"
-                >程式設計（英文授課）</strong
-              ><span>Programming (English)</span>
-            </div>
-            <div class="course">
-              <strong
-                data-zh="數值地形分析與水文分析"
-                data-en="Terrain Analysis and Hydrologic Modeling"
-                >數值地形分析與水文分析</strong
-              ><span>Terrain Analysis and Hydrologic Modeling</span>
-            </div>
-            <div class="course">
-              <strong
-                data-zh="地表作用與演育"
-                data-en="Surface Processes and Landscape Evolution"
-                >地表作用與演育</strong
-              ><span>Surface Processes and Landscape Evolution</span>
+          </div>
+          <div class="course-group">
+            <h3 data-zh="計算方法" data-en="Computational methods">計算方法</h3>
+            <div class="course-grid">
+              <div class="course">
+                <strong
+                  data-zh="程式設計（英文授課）"
+                  data-en="Programming (English)"
+                  >程式設計（英文授課）</strong
+                ><span>Programming (English)</span>
+              </div>
+              <div class="course">
+                <strong
+                  data-zh="數值地形分析與水文分析"
+                  data-en="Terrain Analysis and Hydrologic Modeling"
+                  >數值地形分析與水文分析</strong
+                ><span>Terrain Analysis and Hydrologic Modeling</span>
+              </div>
+              <div class="course">
+                <strong
+                  data-zh="地表作用與演育"
+                  data-en="Surface Processes and Landscape Evolution"
+                  >地表作用與演育</strong
+                ><span>Surface Processes and Landscape Evolution</span>
+              </div>
             </div>
           </div>
         </section>
