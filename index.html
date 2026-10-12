@@ -991,8 +991,7 @@
       .student-group > h3.undergraduate-alumni-heading {
         color: var(--blue);
       }
-      .news-item,
-      .announcement-item {
+      .news-item {
         display: flex;
         gap: 28px;
         align-items: baseline;
@@ -1039,6 +1038,10 @@
         padding-bottom: 0;
       }
       .announcement-item {
+        display: grid;
+        grid-template-columns: 82px minmax(0, 1fr);
+        column-gap: 28px;
+        align-items: baseline;
         background: color-mix(in srgb, var(--sand) 42%, transparent);
         padding: 14px 16px;
       }
@@ -1146,9 +1149,12 @@
         overflow: hidden;
       }
       @media (max-width: 600px) {
-        .news-item,
-        .announcement-item {
+        .news-item {
           gap: 16px;
+        }
+        .announcement-item {
+          grid-template-columns: 72px minmax(0, 1fr);
+          column-gap: 16px;
         }
         .news-item p,
         .announcement-item p {
