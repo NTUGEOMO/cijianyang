@@ -1027,6 +1027,19 @@
       .news-item .year {
         flex-shrink: 0;
       }
+      .news-item--announcement {
+        background: color-mix(in srgb, var(--sand) 42%, transparent);
+        padding: 14px 16px;
+      }
+      .news-item--announcement .announcement-label {
+        color: var(--blue);
+        font-weight: 700;
+      }
+      .news-item--announcement a {
+        color: var(--blue);
+        font-weight: 700;
+        text-underline-offset: 3px;
+      }
       .news-gallery {
         margin-top: 38px;
         padding-top: 28px;
@@ -1321,6 +1334,31 @@
             <h2 data-zh="最新消息" data-en="Latest news">最新消息</h2>
           </div>
           <div class="news-list" aria-label="最新消息，可向下捲動查看更多">
+            <article class="news-item news-item--announcement">
+              <time class="year" datetime="2027-06">2027 · 06</time>
+              <p>
+                <span
+                  class="announcement-label"
+                  data-zh="活動公告"
+                  data-en="Event announcement"
+                  >活動公告</span
+                >
+                <span
+                  data-zh="｜國際地形學會區域會議將於 6 月 21–24 日在臺灣臺北舉辦，"
+                  data-en="｜The International Association of Geomorphologists Regional Conference will be held in Taipei, Taiwan, June 21–24, "
+                  >｜國際地形學會區域會議將於 6 月 21–24
+                  日在臺灣臺北舉辦，</span
+                >
+                <a
+                  href="https://2027iagregionalconference.com/program"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-zh="現正議程徵集中"
+                  data-en="Call for sessions now open"
+                  >現正議程徵集中</a
+                >
+              </p>
+            </article>
             <article class="news-item">
               <time class="year" datetime="2026-11">2026 · 11</time>
               <p
