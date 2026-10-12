@@ -942,6 +942,9 @@
         flex-shrink: 0;
         object-fit: contain;
       }
+      html[lang="en"] .brand .lab-title-zh {
+        display: none;
+      }
       @media (max-width: 1100px) {
         .nav {
           flex-wrap: wrap;
@@ -1174,11 +1177,8 @@
             alt="NTU Geomorphology research laboratory logo"
           />
           <div>
-            <span
-              data-zh="地表作用與地形演育實驗室"
-              data-en="Surface Processes &amp; Landforms Lab"
-              >地表作用與地形演育實驗室</span
-            >
+            <span>Surface Processes &amp; Landforms Lab</span>
+            <small class="lab-title-zh">地表作用與地形演育研究室</small>
           </div></a
         >
         <nav aria-label="Main navigation">
