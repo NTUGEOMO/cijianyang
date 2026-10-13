@@ -994,6 +994,14 @@
       .student-group > h3.undergraduate-alumni-heading {
         color: var(--blue);
       }
+      .profile-photo {
+        display: block;
+        width: min(100%, 360px);
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: center top;
+        margin: 0 0 28px;
+      }
       .news-item {
         display: flex;
         gap: 28px;
@@ -2598,6 +2606,14 @@
           </div>
           <div class="bio-grid">
             <div>
+              <img
+                class="profile-photo"
+                src="photo2/cijianyang.jpg"
+                width="605"
+                height="807"
+                alt="楊啟見於冰河前的照片"
+                loading="lazy"
+              />
               <p
                 data-zh="現任國立臺灣大學地理環境資源學系助理教授，研究聚焦地形演育、關鍵帶地表作用與地景韌性。"
                 data-en="I am an Assistant Professor in the Department of Geography at National Taiwan University, working on landscape evolution, Critical Zone surface processes, and landscape resilience."
