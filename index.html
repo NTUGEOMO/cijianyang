@@ -997,7 +997,7 @@
       .profile-photo {
         display: block;
         width: min(100%, 220px);
-        aspect-ratio: 4 / 3;
+        height: 165px;
         object-fit: cover;
         object-position: center top;
         margin: 0 0 28px;
@@ -1119,12 +1119,18 @@
       }
       .photo-track figure {
         margin: 0;
+        position: relative;
+        aspect-ratio: 4 / 3;
+        min-height: 0;
+        overflow: hidden;
         scroll-snap-align: start;
       }
       .photo-track img {
         display: block;
+        position: absolute;
+        inset: 0;
         width: 100%;
-        aspect-ratio: 4 / 3;
+        height: 100%;
         object-fit: cover;
         cursor: zoom-in;
       }
