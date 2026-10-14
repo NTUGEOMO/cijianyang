@@ -568,13 +568,22 @@
         font-weight: 600;
         line-height: 1.13;
         letter-spacing: -0.03em;
-        margin: 0 0 25px;
+        margin: 0;
       }
       .landscape-copy > div {
         font-size: 17px;
       }
-      .hero-caption {
+      .landscape-copy .hero-caption {
+        position: absolute;
+        right: 45px;
+        bottom: 24px;
         min-height: 1.5em;
+        max-width: min(42vw, 420px);
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-align: right;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
       }
       .research-intro {
         max-width: 950px;
@@ -725,6 +734,12 @@
         .landscape-copy > div {
           font-size: 15px;
           max-width: 300px;
+        }
+        .landscape-copy .hero-caption {
+          right: 24px;
+          bottom: 18px;
+          max-width: 260px;
+          font-size: 13px;
         }
         .research-intro {
           margin: 45px auto 8px;
