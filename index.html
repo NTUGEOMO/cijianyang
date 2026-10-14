@@ -1228,34 +1228,46 @@
       <div class="landscape">
         <img
           class="cover-slide is-active"
-          src="cover/16FE867E-A4E4-4213-A417-E3794CECBB22.jpg"
+          src="cover/optimized/16FE867E-A4E4-4213-A417-E3794CECBB22.webp"
           alt=""
+          decoding="async"
+          fetchpriority="high"
         />
         <img
           class="cover-slide"
-          src="cover/1E2F152F-4630-4F0E-8E88-ABB13547E6E2.jpg"
+          data-src="cover/optimized/1E2F152F-4630-4F0E-8E88-ABB13547E6E2.webp"
           alt=""
+          decoding="async"
         />
         <img
           class="cover-slide"
-          src="cover/2014AFFD-2DBD-477F-B927-0DACE55C5CDF.jpg"
+          data-src="cover/optimized/2014AFFD-2DBD-477F-B927-0DACE55C5CDF.webp"
           alt=""
+          decoding="async"
         />
         <img
           class="cover-slide"
-          src="cover/29D75DB5-A058-44EF-8DD2-A71CFD4CA2C5.jpg"
+          data-src="cover/optimized/29D75DB5-A058-44EF-8DD2-A71CFD4CA2C5.webp"
           alt=""
+          decoding="async"
         />
         <img
           class="cover-slide"
-          src="cover/8FD898FA-3988-4773-A074-417EFD739A32.jpg"
+          data-src="cover/optimized/8FD898FA-3988-4773-A074-417EFD739A32.webp"
           alt=""
+          decoding="async"
         />
-        <img class="cover-slide" src="cover/badlands.jpg" alt="" />
         <img
           class="cover-slide"
-          src="cover/E310AFEF-57EB-40A2-8017-FB588C425261.jpg"
+          data-src="cover/optimized/badlands.webp"
           alt=""
+          decoding="async"
+        />
+        <img
+          class="cover-slide"
+          data-src="cover/optimized/E310AFEF-57EB-40A2-8017-FB588C425261.webp"
+          alt=""
+          decoding="async"
         />
         <div class="landscape-copy wrap">
           <p
@@ -3204,11 +3216,32 @@
         "(prefers-reduced-motion: reduce)",
       ).matches;
       let activeCoverSlide = 0;
+      const loadCoverSlide = (index) => {
+        const slide = coverSlides[index];
+        if (!slide || !slide.dataset.src || slide.dataset.loaded) return;
+        slide.src = slide.dataset.src;
+        slide.dataset.loaded = "true";
+      };
+      const preloadNextCoverSlide = () => {
+        loadCoverSlide((activeCoverSlide + 1) % coverSlides.length);
+      };
       if (coverSlides.length > 1 && !reduceMotion) {
+        const queueInitialCoverPreload = () => {
+          window.setTimeout(preloadNextCoverSlide, 1200);
+        };
+        if (document.readyState === "complete") {
+          queueInitialCoverPreload();
+        } else {
+          window.addEventListener("load", queueInitialCoverPreload, {
+            once: true,
+          });
+        }
         window.setInterval(() => {
           coverSlides[activeCoverSlide].classList.remove("is-active");
           activeCoverSlide = (activeCoverSlide + 1) % coverSlides.length;
+          loadCoverSlide(activeCoverSlide);
           coverSlides[activeCoverSlide].classList.add("is-active");
+          window.setTimeout(preloadNextCoverSlide, 0);
         }, 5000);
       }
     </script>
