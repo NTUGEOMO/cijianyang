@@ -241,11 +241,6 @@
         color: var(--muted);
         margin: 18px 0;
       }
-      .tags {
-        font-size: 13px;
-        line-height: 2;
-        color: var(--blue);
-      }
       .publications {
         background: var(--pale);
       }
@@ -502,11 +497,6 @@
         letter-spacing: 0;
         font-weight: 400;
       }
-      .brand .lab-affiliation {
-        margin-top: 2px;
-        color: var(--muted);
-        font-size: 13px;
-      }
       nav {
         gap: 23px;
       }
@@ -549,46 +539,6 @@
           rgba(0, 0, 0, 0.1)
         );
         pointer-events: none;
-      }
-      .landscape-copy {
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        color: white;
-        max-width: 1190px;
-        margin: auto;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-      }
-      .landscape-copy p {
-        font-size: 15px;
-        margin: 0 0 20px;
-      }
-      .landscape-copy h1 {
-        font-family: Arial, sans-serif;
-        font-size: clamp(38px, 4.8vw, 64px);
-        font-weight: 600;
-        line-height: 1.13;
-        letter-spacing: -0.03em;
-        margin: 0;
-      }
-      .landscape-copy > div {
-        font-size: 17px;
-      }
-      .landscape-copy .hero-caption {
-        position: absolute;
-        right: 45px;
-        bottom: 24px;
-        min-height: 1.5em;
-        max-width: min(42vw, 420px);
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 18px;
-        letter-spacing: 0.04em;
-        text-align: right;
-        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
       }
       .research-intro {
         max-width: 950px;
@@ -639,13 +589,6 @@
       }
       .research p {
         font-size: 17px;
-      }
-      .tags {
-        border-top: 1px solid var(--line);
-        padding-top: 12px;
-        font-size: 12px;
-        letter-spacing: 0.04em;
-        color: #656565;
       }
       .pub h3 {
         font-family: Arial, sans-serif;
@@ -728,23 +671,6 @@
         }
         .landscape {
           height: 380px;
-        }
-        .landscape-copy h1 {
-          font-size: 42px;
-        }
-        .landscape-copy p {
-          font-size: 13px;
-          max-width: 270px;
-        }
-        .landscape-copy > div {
-          font-size: 15px;
-          max-width: 300px;
-        }
-        .landscape-copy .hero-caption {
-          right: 24px;
-          bottom: 18px;
-          max-width: 260px;
-          font-size: 16px;
         }
         .research-intro {
           margin: 45px auto 8px;
@@ -996,10 +922,7 @@
         height: 230px;
         object-fit: contain;
         background: white;
-        margin-top: 22px;
-      }
-      .research .tags {
-        margin-top: auto;
+        margin: 18px 0 0;
       }
       @media (max-width: 650px) {
         .theme-image {
@@ -1221,12 +1144,6 @@
           <div>
             <span>Surface Processes &amp; Landforms Lab</span>
             <small class="lab-title-zh">地表作用與地形演育研究室</small>
-            <small
-              class="lab-affiliation"
-              data-zh="國立臺灣大學 · 地理環境資源學系 · 楊啟見 Ci-Jian Yang"
-              data-en="Department of Geography · National Taiwan University · Ci-Jian Yang"
-              >國立臺灣大學 · 地理環境資源學系 · 楊啟見 Ci-Jian Yang</small
-            >
           </div></a
         >
         <nav aria-label="Main navigation">
@@ -1251,8 +1168,6 @@
         <img
           class="cover-slide is-active"
           src="cover/optimized/16FE867E-A4E4-4213-A417-E3794CECBB22.webp"
-          data-caption-zh="硬頁岩與板岩崩壁"
-          data-caption-en="Hard shale and slate cliff"
           alt=""
           decoding="async"
           fetchpriority="high"
@@ -1260,54 +1175,39 @@
         <img
           class="cover-slide"
           data-src="cover/optimized/1E2F152F-4630-4F0E-8E88-ABB13547E6E2.webp"
-          data-caption-zh="颱風後的河川輸砂"
-          data-caption-en="Post-typhoon river sediment transport"
           alt=""
           decoding="async"
         />
         <img
           class="cover-slide"
           data-src="cover/optimized/2014AFFD-2DBD-477F-B927-0DACE55C5CDF.webp"
-          data-caption-zh="高山森林集水區"
-          data-caption-en="High-mountain forest catchment"
           alt=""
           decoding="async"
         />
         <img
           class="cover-slide"
           data-src="cover/optimized/29D75DB5-A058-44EF-8DD2-A71CFD4CA2C5.webp"
-          data-caption-zh="金門花崗岩海岸"
-          data-caption-en="Kinmen granite coast"
           alt=""
           decoding="async"
         />
         <img
           class="cover-slide"
           data-src="cover/optimized/8FD898FA-3988-4773-A074-417EFD739A32.webp"
-          data-caption-zh="同震崩塌"
-          data-caption-en="Coseismic landslides"
           alt=""
           decoding="async"
         />
         <img
           class="cover-slide"
           data-src="cover/optimized/badlands.webp"
-          data-caption-zh="惡地地形景觀"
-          data-caption-en="Badlands landscape"
           alt=""
           decoding="async"
         />
         <img
           class="cover-slide"
           data-src="cover/optimized/E310AFEF-57EB-40A2-8017-FB588C425261.webp"
-          data-caption-zh="東部斷層海岸地景"
-          data-caption-en="Eastern fault coast landscape"
           alt=""
           decoding="async"
         />
-        <div class="landscape-copy wrap">
-          <div class="hero-caption" aria-live="polite">硬頁岩與板岩崩壁</div>
-        </div>
       </div>
       <div class="wrap">
         <div class="research-intro">
@@ -1338,13 +1238,6 @@
             <article>
               <h3 data-zh="地形演育" data-en="Landscape evolution">地形演育</h3>
               <div class="en">Landscape Evolution</div>
-              <p
-                data-zh="研究降雨與構造活動如何控制侵蝕與地形變遷，並透過邊坡、河道與集水區幾何，探索不同環境下的共同機制。"
-                data-en="We investigate how rainfall and tectonic activity control erosion and topographic change, exploring shared mechanisms across environments through hillslopes, channels, and drainage basin geometry."
-              >
-                研究降雨與構造活動如何控制侵蝕與地形變遷，並透過邊坡、河道與集水區幾何，探索不同環境下的共同機制。
-              </p>
-              <div class="tags">HILLSLOPES + DRAINAGE GEOMETRY</div>
               <img
                 class="theme-image"
                 src="research/landscape.png"
@@ -1353,19 +1246,18 @@
                 alt="Drone with a terrain surveying sensor"
                 loading="lazy"
               />
+              <p
+                data-zh="研究降雨與構造活動如何控制侵蝕與地形變遷，並透過邊坡、河道與集水區幾何，探索不同環境下的共同機制。"
+                data-en="We investigate how rainfall and tectonic activity control erosion and topographic change, exploring shared mechanisms across environments through hillslopes, channels, and drainage basin geometry."
+              >
+                研究降雨與構造活動如何控制侵蝕與地形變遷，並透過邊坡、河道與集水區幾何，探索不同環境下的共同機制。
+              </p>
             </article>
             <article>
               <h3 data-zh="關鍵帶地表作用" data-en="Critical Zone processes">
                 關鍵帶地表作用
               </h3>
               <div class="en">Critical Zone Surface Processes</div>
-              <p
-                data-zh="連結水文、風化與物質傳輸，探究沉積物的產生、儲存和輸出。"
-                data-en="We connect hydrology, weathering, and material transport to investigate sediment production, storage, and export."
-              >
-                連結水文、風化與物質傳輸，探究沉積物的產生、儲存和輸出。
-              </p>
-              <div class="tags">WEATHERING + HYDROLOGY</div>
               <img
                 class="theme-image"
                 src="research/critical-zone.png"
@@ -1374,19 +1266,18 @@
                 alt="Field monitoring electronics and data loggers"
                 loading="lazy"
               />
+              <p
+                data-zh="連結水文、風化與物質傳輸，探究沉積物的產生、儲存和輸出。"
+                data-en="We connect hydrology, weathering, and material transport to investigate sediment production, storage, and export."
+              >
+                連結水文、風化與物質傳輸，探究沉積物的產生、儲存和輸出。
+              </p>
             </article>
             <article>
               <h3 data-zh="地景韌性" data-en="Landscape resilience">
                 地景韌性
               </h3>
               <div class="en">Landscape Resilience</div>
-              <p
-                data-zh="追蹤極端地形事件後的沉積物供應和河道調整，結合野外觀測與數值模擬，理解山地集水區的重組與恢復。"
-                data-en="We track sediment supply and channel adjustment following extreme geomorphic events, combining field observations and numerical simulations to understand the reorganization and recovery of mountain catchments."
-              >
-                追蹤極端地形事件後的沉積物供應和河道調整，結合野外觀測與數值模擬，理解山地集水區的重組與恢復。
-              </p>
-              <div class="tags">EXTREME EVENTS / SEDIMENT / RECOVERY</div>
               <img
                 class="theme-image"
                 src="research/resilience.png"
@@ -1395,6 +1286,12 @@
                 alt="Laboratory particle size analyzer"
                 loading="lazy"
               />
+              <p
+                data-zh="追蹤極端地形事件後的沉積物供應和河道調整，結合野外觀測與數值模擬，理解山地集水區的重組與恢復。"
+                data-en="We track sediment supply and channel adjustment following extreme geomorphic events, combining field observations and numerical simulations to understand the reorganization and recovery of mountain catchments."
+              >
+                追蹤極端地形事件後的沉積物供應和河道調整，結合野外觀測與數值模擬，理解山地集水區的重組與恢復。
+              </p>
             </article>
           </div>
         </section>
@@ -3168,7 +3065,6 @@
           "aria-label",
           language === "zh" ? "Switch language to English" : "切換為中文",
         );
-        updateCoverCaption();
       });
 
       const photoTrack = document.querySelector(".photo-track");
@@ -3226,15 +3122,10 @@
       });
 
       const coverSlides = [...document.querySelectorAll(".cover-slide")];
-      const heroCaption = document.querySelector(".hero-caption");
       const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
       let activeCoverSlide = 0;
-      const updateCoverCaption = () => {
-        const key = language === "zh" ? "captionZh" : "captionEn";
-        heroCaption.textContent = coverSlides[activeCoverSlide].dataset[key];
-      };
       const loadCoverSlide = (index) => {
         const slide = coverSlides[index];
         if (!slide || !slide.dataset.src || slide.dataset.loaded) return;
@@ -3260,7 +3151,6 @@
           activeCoverSlide = (activeCoverSlide + 1) % coverSlides.length;
           loadCoverSlide(activeCoverSlide);
           coverSlides[activeCoverSlide].classList.add("is-active");
-          updateCoverCaption();
           window.setTimeout(preloadNextCoverSlide, 0);
         }, 5000);
       }
