@@ -8,11 +8,7 @@
       name="description"
       content="楊啟見 Ci-Jian Yang，國立臺灣大學地理環境資源學系助理教授。研究地形演育、關鍵帶地表作用與地景韌性。"
     />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23132643'/%3E%3Cpath d='M5 23L13 10L19 18L23 13L28 23' fill='none' stroke='%23c1d6fa' stroke-width='2'/%3E%3C/svg%3E"
-    />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <style>
       :root {
         --ink: #132643;
@@ -577,6 +573,9 @@
       .landscape-copy > div {
         font-size: 17px;
       }
+      .hero-caption {
+        min-height: 1.5em;
+      }
       .research-intro {
         max-width: 950px;
         margin: 65px auto 20px;
@@ -945,9 +944,6 @@
       html[lang="en"] .brand .lab-title-zh {
         display: none;
       }
-      html[lang="en"] .hero-subtitle {
-        display: none;
-      }
       @media (max-width: 1100px) {
         .nav {
           flex-wrap: wrap;
@@ -1229,6 +1225,8 @@
         <img
           class="cover-slide is-active"
           src="cover/optimized/16FE867E-A4E4-4213-A417-E3794CECBB22.webp"
+          data-caption-zh="山崩地形野外觀測"
+          data-caption-en="Landslide field survey"
           alt=""
           decoding="async"
           fetchpriority="high"
@@ -1236,36 +1234,48 @@
         <img
           class="cover-slide"
           data-src="cover/optimized/1E2F152F-4630-4F0E-8E88-ABB13547E6E2.webp"
+          data-caption-zh="颱風後的河川輸砂"
+          data-caption-en="Post-typhoon sediment transport"
           alt=""
           decoding="async"
         />
         <img
           class="cover-slide"
           data-src="cover/optimized/2014AFFD-2DBD-477F-B927-0DACE55C5CDF.webp"
+          data-caption-zh="山地流域地景"
+          data-caption-en="Mountain catchment landscape"
           alt=""
           decoding="async"
         />
         <img
           class="cover-slide"
           data-src="cover/optimized/29D75DB5-A058-44EF-8DD2-A71CFD4CA2C5.webp"
+          data-caption-zh="海岸崖地形"
+          data-caption-en="Coastal cliff landscape"
           alt=""
           decoding="async"
         />
         <img
           class="cover-slide"
           data-src="cover/optimized/8FD898FA-3988-4773-A074-417EFD739A32.webp"
+          data-caption-zh="崩塌地形演變"
+          data-caption-en="Evolving landslide terrain"
           alt=""
           decoding="async"
         />
         <img
           class="cover-slide"
           data-src="cover/optimized/badlands.webp"
+          data-caption-zh="惡地地形景觀"
+          data-caption-en="Badlands landscape"
           alt=""
           decoding="async"
         />
         <img
           class="cover-slide"
           data-src="cover/optimized/E310AFEF-57EB-40A2-8017-FB588C425261.webp"
+          data-caption-zh="東部海岸地景"
+          data-caption-en="Eastern coastal landscape"
           alt=""
           decoding="async"
         />
@@ -1277,13 +1287,7 @@
             國立臺灣大學 · 地理環境資源學系 · 楊啟見 Ci-Jian Yang
           </p>
           <h1>Surface Processes<br />&amp; Landforms</h1>
-          <div
-            class="hero-subtitle"
-            data-zh="地表作用與地形演育"
-            data-en="Earth Surface Processes &amp; Geomorphology"
-          >
-            地表作用與地形演育
-          </div>
+          <div class="hero-caption" aria-live="polite">山崩地形野外觀測</div>
         </div>
       </div>
       <div class="wrap">
@@ -3145,6 +3149,7 @@
           "aria-label",
           language === "zh" ? "Switch language to English" : "切換為中文",
         );
+        updateCoverCaption();
       });
 
       const photoTrack = document.querySelector(".photo-track");
@@ -3202,10 +3207,15 @@
       });
 
       const coverSlides = [...document.querySelectorAll(".cover-slide")];
+      const heroCaption = document.querySelector(".hero-caption");
       const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
       let activeCoverSlide = 0;
+      const updateCoverCaption = () => {
+        const key = language === "zh" ? "captionZh" : "captionEn";
+        heroCaption.textContent = coverSlides[activeCoverSlide].dataset[key];
+      };
       const loadCoverSlide = (index) => {
         const slide = coverSlides[index];
         if (!slide || !slide.dataset.src || slide.dataset.loaded) return;
@@ -3231,6 +3241,7 @@
           activeCoverSlide = (activeCoverSlide + 1) % coverSlides.length;
           loadCoverSlide(activeCoverSlide);
           coverSlides[activeCoverSlide].classList.add("is-active");
+          updateCoverCaption();
           window.setTimeout(preloadNextCoverSlide, 0);
         }, 5000);
       }
