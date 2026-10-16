@@ -635,12 +635,11 @@
         margin: 0 0 24px;
       }
       .lab-feature {
-        display: grid;
-        grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-        gap: 38px;
-        align-items: start;
         background: var(--pale);
         padding: 28px;
+      }
+      .lab-copy {
+        max-width: 760px;
       }
       .lab-copy h4,
       .field-site h4 {
@@ -700,6 +699,7 @@
       }
       .field-site img {
         aspect-ratio: 4 / 3;
+        height: 220px;
         margin-bottom: 18px;
       }
       .field-site h4 {
@@ -895,6 +895,9 @@
         .field-sites {
           gap: 35px;
         }
+        .field-site img {
+          height: 280px;
+        }
       }
       @media (max-width: 550px) {
         .team-grid {
@@ -926,9 +929,11 @@
       }
       .pub-story img {
         width: 100%;
-        height: 230px;
+        height: auto;
+        max-height: 320px;
         object-fit: contain;
         display: block;
+        margin-inline: auto;
       }
       .pub-story figcaption {
         font-size: 13px;
@@ -947,10 +952,6 @@
           grid-column: 2;
           grid-template-columns: 1fr;
           gap: 20px;
-        }
-        .pub-story img {
-          height: auto;
-          max-height: 420px;
         }
         .pub p.pub-summary {
           font-size: 16px;
@@ -1037,19 +1038,12 @@
         display: block;
         width: 100%;
         height: 230px;
-        object-fit: contain;
-        background: white;
+        object-fit: cover;
         margin: 18px 0 0;
       }
       .theme-image.resilience-image {
         object-fit: cover;
         object-position: center;
-      }
-      @media (max-width: 650px) {
-        .theme-image {
-          height: auto;
-          max-height: 300px;
-        }
       }
       .student-group > h3.undergraduate-alumni-heading {
         color: var(--blue);
@@ -1651,7 +1645,7 @@
               </figure>
               <figure>
                 <img
-                  src="infrastructure/field-site-taroko.jpg"
+                  src="photo/C07FDAE0-3F0D-48D5-B914-93AA22B30FA2.jpg"
                   alt="研究室活動照片 7"
                   loading="lazy"
                 />
@@ -2847,25 +2841,9 @@
                   樣品依研究需求進行乾燥、分散與篩分，建立可重現的粒徑分析流程。
                 </p>
                 <ul>
-                  <li>Laser Diffraction Particle Size Analyzer LA950</li>
                   <li>Sieve Shaker Retsch AS 200</li>
                 </ul>
               </div>
-              <figure class="lab-photo">
-                <img
-                  src="infrastructure/la950-transparent.png"
-                  alt="Laser Diffraction Particle Size Analyzer LA950"
-                  width="508"
-                  height="358"
-                  loading="lazy"
-                />
-                <figcaption
-                  data-zh="Laser Diffraction Particle Size Analyzer LA950。"
-                  data-en="Laser Diffraction Particle Size Analyzer LA950."
-                >
-                  Laser Diffraction Particle Size Analyzer LA950。
-                </figcaption>
-              </figure>
             </article>
           </div>
           <div class="infrastructure-block">
@@ -2875,7 +2853,7 @@
             <div class="field-sites">
               <article class="field-site">
                 <img
-                  src="photo/C07FDAE0-3F0D-48D5-B914-93AA22B30FA2.jpg"
+                  src="infrastructure/field-site-taroko.jpg"
                   alt="太魯閣國家公園野外調查"
                   width="1094"
                   height="729"
