@@ -680,6 +680,8 @@
       }
       .lab-photo img {
         aspect-ratio: 4 / 3;
+        object-fit: contain;
+        background: #fff;
       }
       .lab-photo figcaption {
         color: var(--muted);
@@ -1039,6 +1041,10 @@
         background: white;
         margin: 18px 0 0;
       }
+      .theme-image.resilience-image {
+        object-fit: cover;
+        object-position: center;
+      }
       @media (max-width: 650px) {
         .theme-image {
           height: auto;
@@ -1397,11 +1403,11 @@
               </h3>
               <div class="en">Landscape Resilience</div>
               <img
-                class="theme-image"
-                src="research/resilience.png"
-                width="508"
-                height="358"
-                alt="Laboratory particle size analyzer"
+                class="theme-image resilience-image"
+                src="infrastructure/landscape-resilience.jpg"
+                width="1056"
+                height="791"
+                alt="Aerial view of a landslide, road, and channel in a mountain catchment"
                 loading="lazy"
               />
               <p
@@ -2847,17 +2853,17 @@
               </div>
               <figure class="lab-photo">
                 <img
-                  src="photo/e33197cd906595959219e4dd0d3664d0.JPEG"
-                  alt="河川中進行沉積物採樣作業"
-                  width="1536"
-                  height="2048"
+                  src="infrastructure/la950.png"
+                  alt="Laser Diffraction Particle Size Analyzer LA950"
+                  width="508"
+                  height="358"
                   loading="lazy"
                 />
                 <figcaption
-                  data-zh="沉積物採樣後，將於實驗室進行前處理與粒徑分析。"
-                  data-en="Sediment samples are prepared and analysed for grain size in the laboratory."
+                  data-zh="Laser Diffraction Particle Size Analyzer LA950。"
+                  data-en="Laser Diffraction Particle Size Analyzer LA950."
                 >
-                  沉積物採樣後，將於實驗室進行前處理與粒徑分析。
+                  Laser Diffraction Particle Size Analyzer LA950。
                 </figcaption>
               </figure>
             </article>
