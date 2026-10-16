@@ -635,6 +635,10 @@
         margin: 0 0 24px;
       }
       .lab-feature {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+        gap: 38px;
+        align-items: start;
         background: var(--pale);
         padding: 28px;
       }
@@ -694,13 +698,15 @@
         gap: 24px;
       }
       .field-site {
-        border-top: 2px solid var(--ink);
-        padding-top: 14px;
+        padding-top: 0;
       }
       .field-site img {
         aspect-ratio: 4 / 3;
         height: 220px;
         margin-bottom: 18px;
+      }
+      .field-site img.fushan-image {
+        object-position: 75% center;
       }
       .field-site h4 {
         margin-bottom: 8px;
@@ -1045,6 +1051,11 @@
         object-fit: cover;
         object-position: center;
       }
+      .theme-image.landscape-image {
+        object-fit: contain;
+        background: white;
+        padding: 14px;
+      }
       .student-group > h3.undergraduate-alumni-heading {
         color: var(--blue);
       }
@@ -1355,7 +1366,7 @@
               <h3 data-zh="地形演育" data-en="Landscape evolution">地形演育</h3>
               <div class="en">Landscape Evolution</div>
               <img
-                class="theme-image"
+                class="theme-image landscape-image"
                 src="research/landscape.png"
                 width="400"
                 height="197"
@@ -2831,6 +2842,16 @@
                 >
                   透過沉積物的粒徑分布與篩分結果，連結坡地、河道與集水區中的物質來源、輸送與儲存。
                 </p>
+                <h5 data-zh="樣本採樣" data-en="Sample collection">樣本採樣</h5>
+                <ul>
+                  <li data-zh="底泥採樣器" data-en="Bed-sediment sampler">
+                    底泥採樣器
+                  </li>
+                  <li data-zh="橡皮艇" data-en="Inflatable raft">橡皮艇</li>
+                  <li data-zh="水下聲納" data-en="Underwater sonar">
+                    水下聲納
+                  </li>
+                </ul>
                 <h5 data-zh="樣品前處理" data-en="Sample preparation">
                   樣品前處理
                 </h5>
@@ -2841,9 +2862,19 @@
                   樣品依研究需求進行乾燥、分散與篩分，建立可重現的粒徑分析流程。
                 </p>
                 <ul>
+                  <li>Laser Diffraction Particle Size Analyzer LA950</li>
                   <li>Sieve Shaker Retsch AS 200</li>
                 </ul>
               </div>
+              <figure class="lab-photo">
+                <img
+                  src="infrastructure/la950-transparent.png"
+                  alt="Sediment Laboratory particle-size analyzer"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+              </figure>
             </article>
           </div>
           <div class="infrastructure-block">
@@ -2859,7 +2890,9 @@
                   height="729"
                   loading="lazy"
                 />
-                <h4>Taroko National Park</h4>
+                <h4 data-zh="太魯閣國家公園" data-en="Taroko National Park">
+                  太魯閣國家公園
+                </h4>
                 <p
                   data-zh="以高山溪流與快速侵蝕地景為天然實驗場，整合河川、坡地與極端事件的觀測。"
                   data-en="A natural laboratory for observing mountain rivers, rapid erosion, and the interactions among channels, hillslopes, and extreme events."
@@ -2869,13 +2902,19 @@
               </article>
               <article class="field-site">
                 <img
+                  class="fushan-image"
                   src="infrastructure/field-site-fushan.jpg"
                   alt="福山植物園森林溪流觀測"
                   width="1638"
                   height="675"
                   loading="lazy"
                 />
-                <h4>Fushan Botanical Garden WS</h4>
+                <h4
+                  data-zh="福山植物園一號集水區"
+                  data-en="Fushan Botanical Garden WS"
+                >
+                  福山植物園一號集水區
+                </h4>
                 <p
                   data-zh="在亞熱帶森林集水區觀察降雨、地下水與河川反應，連結植生與水文作用。"
                   data-en="A subtropical forest watershed for observing rainfall, groundwater, and stream responses, linking vegetation with hydrological processes."
@@ -2891,7 +2930,12 @@
                   height="454"
                   loading="lazy"
                 />
-                <h4>Badlands Geopark (Tainan + Kaohsiung)</h4>
+                <h4
+                  data-zh="泥岩惡地地質公園"
+                  data-en="Badlands Geopark (Tainan + Kaohsiung)"
+                >
+                  泥岩惡地地質公園
+                </h4>
                 <p
                   data-zh="跨臺南與高雄惡地地景，追蹤泥岩侵蝕、沉積物連通性與人為構造的影響。"
                   data-en="Badland landscapes across Tainan and Kaohsiung for tracking mudstone erosion, sediment connectivity, and the influence of human structures."
