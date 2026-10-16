@@ -618,6 +618,96 @@
       .bio-grid a {
         color: var(--blue);
       }
+      .infrastructure {
+        border-top: 1px solid var(--line);
+        background: #fff;
+      }
+      .infrastructure > .wrap > .section-head {
+        margin-bottom: 42px;
+      }
+      .infrastructure-block + .infrastructure-block {
+        margin-top: 62px;
+      }
+      .infrastructure-block > h3 {
+        color: var(--blue);
+        font-size: 22px;
+        font-weight: 600;
+        margin: 0 0 24px;
+      }
+      .lab-feature {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+        gap: 38px;
+        align-items: start;
+        background: var(--pale);
+        padding: 28px;
+      }
+      .lab-copy h4,
+      .field-site h4 {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.4;
+        margin: 0 0 12px;
+      }
+      .lab-copy > p,
+      .lab-copy li,
+      .field-site p {
+        color: var(--muted);
+      }
+      .lab-copy > p {
+        margin: 0 0 24px;
+      }
+      .lab-copy h5 {
+        color: var(--blue);
+        font-size: 16px;
+        margin: 0 0 8px;
+      }
+      .lab-copy ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+      }
+      .lab-copy li {
+        margin: 7px 0;
+      }
+      .lab-photo {
+        margin: 0;
+      }
+      .lab-photo img,
+      .field-site img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+      .lab-photo img {
+        aspect-ratio: 4 / 3;
+      }
+      .lab-photo figcaption {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+        margin-top: 10px;
+      }
+      .field-sites {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+      .field-site {
+        border-top: 2px solid var(--ink);
+        padding-top: 14px;
+      }
+      .field-site img {
+        aspect-ratio: 4 / 3;
+        margin-bottom: 18px;
+      }
+      .field-site h4 {
+        margin-bottom: 8px;
+      }
+      .field-site p {
+        font-size: 15px;
+        line-height: 1.75;
+        margin: 0;
+      }
       .contact {
         background: #f0f0f0;
         color: var(--ink);
@@ -795,6 +885,13 @@
         .service-grid {
           grid-template-columns: 1fr;
           gap: 25px;
+        }
+        .lab-feature,
+        .field-sites {
+          grid-template-columns: 1fr;
+        }
+        .field-sites {
+          gap: 35px;
         }
       }
       @media (max-width: 550px) {
@@ -1167,6 +1264,7 @@
         <nav aria-label="Main navigation">
           <a href="#research" data-zh="研究" data-en="Research">研究</a
           ><a href="#publications" data-zh="著作" data-en="Publications">著作</a
+          ><a href="#infrastructure" data-zh="設施" data-en="Facilities">設施</a
           ><a href="#about" data-zh="關於" data-en="About">關於</a
           ><a href="#teaching" data-zh="教學" data-en="Teaching">教學</a
           ><a href="#team" data-zh="成員" data-en="People">成員</a
@@ -2710,6 +2808,115 @@
               >
             </article>
           </details>
+        </div>
+      </section>
+      <section class="infrastructure" id="infrastructure">
+        <div class="wrap">
+          <div class="section-head">
+            <h2
+              data-zh="實驗設備與現地觀測"
+              data-en="Laboratories &amp; field sites"
+            >
+              實驗設備與現地觀測
+            </h2>
+          </div>
+          <div class="infrastructure-block">
+            <h3 data-zh="實驗室" data-en="Laboratories">實驗室</h3>
+            <article class="lab-feature">
+              <div class="lab-copy">
+                <h4>Sediment Laboratory (SedLab)</h4>
+                <p
+                  data-zh="透過沉積物的粒徑分布與篩分結果，連結坡地、河道與集水區中的物質來源、輸送與儲存。"
+                  data-en="Grain-size distributions and sieve fractions help us trace sediment sources, transport, and storage across hillslopes, channels, and catchments."
+                >
+                  透過沉積物的粒徑分布與篩分結果，連結坡地、河道與集水區中的物質來源、輸送與儲存。
+                </p>
+                <h5 data-zh="樣品前處理" data-en="Sample preparation">
+                  樣品前處理
+                </h5>
+                <p
+                  data-zh="樣品依研究需求進行乾燥、分散與篩分，建立可重現的粒徑分析流程。"
+                  data-en="Samples are dried, dispersed, and sieved as needed to establish a reproducible workflow for grain-size analysis."
+                >
+                  樣品依研究需求進行乾燥、分散與篩分，建立可重現的粒徑分析流程。
+                </p>
+                <ul>
+                  <li>Laser Diffraction Particle Size Analyzer LA950</li>
+                  <li>Sieve Shaker Retsch AS 200</li>
+                </ul>
+              </div>
+              <figure class="lab-photo">
+                <img
+                  src="photo/e33197cd906595959219e4dd0d3664d0.JPEG"
+                  alt="河川中進行沉積物採樣作業"
+                  width="1536"
+                  height="2048"
+                  loading="lazy"
+                />
+                <figcaption
+                  data-zh="沉積物採樣後，將於實驗室進行前處理與粒徑分析。"
+                  data-en="Sediment samples are prepared and analysed for grain size in the laboratory."
+                >
+                  沉積物採樣後，將於實驗室進行前處理與粒徑分析。
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+          <div class="infrastructure-block">
+            <h3 data-zh="現地觀測場域" data-en="Field Focus Sites">
+              現地觀測場域
+            </h3>
+            <div class="field-sites">
+              <article class="field-site">
+                <img
+                  src="photo/C07FDAE0-3F0D-48D5-B914-93AA22B30FA2.jpg"
+                  alt="太魯閣國家公園野外調查"
+                  width="1600"
+                  height="1204"
+                  loading="lazy"
+                />
+                <h4>Taroko National Park</h4>
+                <p
+                  data-zh="以高山溪流與快速侵蝕地景為天然實驗場，整合河川、坡地與極端事件的觀測。"
+                  data-en="A natural laboratory for observing mountain rivers, rapid erosion, and the interactions among channels, hillslopes, and extreme events."
+                >
+                  以高山溪流與快速侵蝕地景為天然實驗場，整合河川、坡地與極端事件的觀測。
+                </p>
+              </article>
+              <article class="field-site">
+                <img
+                  src="photo/C40EF788-B82F-4602-936F-55740C565AE3.jpg"
+                  alt="福山植物園森林溪流觀測"
+                  width="1209"
+                  height="907"
+                  loading="lazy"
+                />
+                <h4>Fushan Botanical Garden WS</h4>
+                <p
+                  data-zh="在亞熱帶森林集水區觀察降雨、地下水與河川反應，連結植生與水文作用。"
+                  data-en="A subtropical forest watershed for observing rainfall, groundwater, and stream responses, linking vegetation with hydrological processes."
+                >
+                  在亞熱帶森林集水區觀察降雨、地下水與河川反應，連結植生與水文作用。
+                </p>
+              </article>
+              <article class="field-site">
+                <img
+                  src="cover/optimized/badlands.webp"
+                  alt="臺南與高雄惡地地形景觀"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <h4>Badlands Geopark (Tainan + Kaohsiung)</h4>
+                <p
+                  data-zh="跨臺南與高雄惡地地景，追蹤泥岩侵蝕、沉積物連通性與人為構造的影響。"
+                  data-en="Badland landscapes across Tainan and Kaohsiung for tracking mudstone erosion, sediment connectivity, and the influence of human structures."
+                >
+                  跨臺南與高雄惡地地景，追蹤泥岩侵蝕、沉積物連通性與人為構造的影響。
+                </p>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
       <div class="wrap">
