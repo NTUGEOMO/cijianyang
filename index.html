@@ -278,8 +278,7 @@
       }
       .bio-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
+        grid-template-columns: minmax(0, 720px);
       }
       .bio-grid p {
         color: var(--muted);
@@ -3052,50 +3051,60 @@
                 >
               </div>
             </div>
-            <div class="timeline">
-              <article>
-                <small>2023 — PRESENT</small>
-                <h3
-                  data-zh="國立臺灣大學 · 助理教授"
-                  data-en="National Taiwan University · Assistant Professor"
-                >
-                  國立臺灣大學 · 助理教授
-                </h3>
-                <p data-zh="地理環境資源學系" data-en="Department of Geography">
-                  地理環境資源學系
-                </p>
-              </article>
-              <article>
-                <small>2021 — 2023</small>
-                <h3
-                  data-zh="德國地球科學研究中心 · 博士後研究員"
-                  data-en="GFZ Potsdam · Postdoctoral Fellow"
-                >
-                  德國地球科學研究中心 · 博士後研究員
-                </h3>
-                <p>German Research Centre for Geosciences</p>
-              </article>
-              <article>
-                <small>2020 — 2021</small>
-                <h3
-                  data-zh="國立臺灣大學 · 博士後研究員"
-                  data-en="National Taiwan University · Postdoctoral Fellow"
-                >
-                  國立臺灣大學 · 博士後研究員
-                </h3>
-              </article>
-              <article>
-                <small>2020</small>
-                <h3
-                  data-zh="國立臺灣大學 · 地理學博士"
-                  data-en="National Taiwan University · Ph.D. in Geography"
-                >
-                  國立臺灣大學 · 地理學博士
-                </h3>
-              </article>
-            </div>
           </div>
           <div class="about-disclosures">
+            <details class="about-disclosure" id="career">
+              <summary data-zh="學經歷" data-en="Education &amp; experience">
+                學經歷
+              </summary>
+              <div class="about-disclosure-content">
+                <div class="timeline">
+                  <article>
+                    <small>2023 — PRESENT</small>
+                    <h3
+                      data-zh="國立臺灣大學 · 助理教授"
+                      data-en="National Taiwan University · Assistant Professor"
+                    >
+                      國立臺灣大學 · 助理教授
+                    </h3>
+                    <p
+                      data-zh="地理環境資源學系"
+                      data-en="Department of Geography"
+                    >
+                      地理環境資源學系
+                    </p>
+                  </article>
+                  <article>
+                    <small>2021 — 2023</small>
+                    <h3
+                      data-zh="德國地球科學研究中心 · 博士後研究員"
+                      data-en="GFZ Potsdam · Postdoctoral Fellow"
+                    >
+                      德國地球科學研究中心 · 博士後研究員
+                    </h3>
+                    <p>German Research Centre for Geosciences</p>
+                  </article>
+                  <article>
+                    <small>2020 — 2021</small>
+                    <h3
+                      data-zh="國立臺灣大學 · 博士後研究員"
+                      data-en="National Taiwan University · Postdoctoral Fellow"
+                    >
+                      國立臺灣大學 · 博士後研究員
+                    </h3>
+                  </article>
+                  <article>
+                    <small>2020</small>
+                    <h3
+                      data-zh="國立臺灣大學 · 地理學博士"
+                      data-en="National Taiwan University · Ph.D. in Geography"
+                    >
+                      國立臺灣大學 · 地理學博士
+                    </h3>
+                  </article>
+                </div>
+              </div>
+            </details>
             <details class="about-disclosure" id="service">
               <summary
                 data-zh="榮譽與學術活動"
