@@ -890,6 +890,45 @@
         font-weight: 600;
         margin: 0 0 3px;
       }
+      .member-photo-frame {
+        display: block;
+        width: 176px;
+        height: 176px;
+        margin: 0 0 16px;
+        overflow: hidden;
+        border-radius: 50%;
+        background: #edf1f5;
+      }
+      .member-photo-frame img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+      }
+      .member-photo-frame.member-photo-wide img {
+        transform: scale(1.85);
+        transform-origin: center 22%;
+      }
+      .member-photo-frame.member-photo-face-tsai img {
+        object-position: center bottom;
+        transform: scale(2);
+        transform-origin: center 88%;
+      }
+      .member-photo-frame.member-photo-wide.member-photo-face-jun img {
+        object-position: center 56%;
+        transform: scale(2.7);
+        transform-origin: center 56%;
+      }
+      .member-photo-frame.member-photo-face-meng img {
+        object-position: center bottom;
+        transform: scale(2);
+        transform-origin: center 58%;
+      }
+      .member-photo-frame.member-photo-face-shih img {
+        transform: scale(1.8);
+        transform-origin: center 82%;
+      }
       .team-person small,
       .project small {
         font-size: 14px;
@@ -3320,6 +3359,13 @@
             <h3 data-zh="博士生" data-en="Doctoral students">博士生</h3>
             <div class="team-grid">
               <article class="team-person">
+                <span class="member-photo-frame member-photo-face-tsai">
+                  <img
+                    src="photo2/members/tsai-cheng-hua.jpg"
+                    alt="Cheng-Hua Tsai (蔡承樺)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Cheng-Hua Tsai (蔡承樺)</h3>
                 <small>2023–present</small>
                 <p>
@@ -3333,36 +3379,85 @@
             <h3 data-zh="碩士生" data-en="Master’s students">碩士生</h3>
             <div class="team-grid">
               <article class="team-person">
+                <span class="member-photo-frame member-photo-wide member-photo-face-jun">
+                  <img
+                    src="photo2/members/lee-jun-yang.jpg"
+                    alt="Jun-Yang Lee (李雋揚)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Jun-Yang Lee (李雋揚)</h3>
                 <small>2024–present</small>
                 <p>Channel sediment dynamics driven by coseismic landslides</p>
               </article>
               <article class="team-person">
+                <span class="member-photo-frame member-photo-face-meng">
+                  <img
+                    src="photo2/members/lee-meng-yu.jpg"
+                    alt="Meng-Yu Lee (李孟聿)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Meng-Yu Lee (李孟聿)</h3>
                 <small>2024–present</small>
                 <p>Channel sediment dynamics driven by coseismic landslides</p>
               </article>
               <article class="team-person">
+                <span class="member-photo-frame">
+                  <img
+                    src="photo2/members/guo-ying-yu.jpg"
+                    alt="Ying-Yu Guo (郭映妤)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Ying-Yu Guo (郭映妤)</h3>
                 <small>2025–present</small>
                 <p>Global landscape energy</p>
               </article>
               <article class="team-person">
+                <span class="member-photo-frame">
+                  <img
+                    src="photo2/members/chien-wei-che.jfif"
+                    alt="Wei-Che Chien (簡維哲)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Wei-Che Chien (簡維哲)</h3>
                 <small>2025–present</small>
                 <p>Post-landslide vegetation recovery</p>
               </article>
               <article class="team-person">
+                <span class="member-photo-frame">
+                  <img
+                    src="photo2/members/hsieh-hsin-yu.jpg"
+                    alt="Hsin-Yu Hsieh (謝昕佑)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Hsin-Yu Hsieh (謝昕佑)</h3>
                 <small>2026–present</small>
                 <p>Post-landslide</p>
               </article>
               <article class="team-person">
+                <span class="member-photo-frame">
+                  <img
+                    src="photo2/members/yun-tao-hsiao.jpg"
+                    alt="Tao-Hsiao Yun (陶曉芸)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Tao-Hsiao Yun (陶曉芸)</h3>
                 <small>2026–present</small>
                 <p>Post-landslide</p>
               </article>
               <article class="team-person">
+                <span class="member-photo-frame">
+                  <img
+                    src="photo2/members/liu-cheng-jui.jpg"
+                    alt="Cheng-Jui Liu (劉烝睿)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Cheng-Jui Liu (劉烝睿)</h3>
                 <small>2026–present</small>
                 <p>Post-landslide sediment</p>
@@ -3373,10 +3468,24 @@
             <h3 data-zh="大學生" data-en="Undergraduate students">大學生</h3>
             <div class="team-grid">
               <article class="team-person">
+                <span class="member-photo-frame member-photo-wide">
+                  <img
+                    src="photo2/members/chung-yu-lun.jpg"
+                    alt="Yu-Lun Chung (鐘育綸)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Yu-Lun Chung (鐘育綸)</h3>
                 <small>2026–present</small>
               </article>
               <article class="team-person">
+                <span class="member-photo-frame">
+                  <img
+                    src="photo2/members/liu-yun-shen.jpg"
+                    alt="Yun-Shen Liu (劉昀珅)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Yun-Shen Liu (劉昀珅)</h3>
                 <small>2026–present</small>
               </article>
@@ -3388,6 +3497,13 @@
             </h3>
             <div class="team-grid">
               <article class="team-person">
+                <span class="member-photo-frame">
+                  <img
+                    src="photo2/members/kong-qian-yun.jpg"
+                    alt="Qian-Yun Kong (孔千勻)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Qian-Yun Kong (孔千勻)</h3>
                 <small>2023–2026</small>
                 <p>
@@ -3397,6 +3513,13 @@
                 </p>
               </article>
               <article class="team-person">
+                <span class="member-photo-frame member-photo-face-shih">
+                  <img
+                    src="photo2/members/shih-shin-ye.jpg"
+                    alt="Shin-Ye Shih (史昕曄)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Shin-Ye Shih (史昕曄)</h3>
                 <small>2024–2026</small>
                 <p>
@@ -3416,6 +3539,13 @@
             </h3>
             <div class="team-grid">
               <article class="team-person">
+                <span class="member-photo-frame">
+                  <img
+                    src="photo2/members/guo-ying-yu.jpg"
+                    alt="Ying-Yu Guo (郭映妤)"
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Ying-Yu Guo (郭映妤)</h3>
                 <small>2023–2025</small>
                 <p>
