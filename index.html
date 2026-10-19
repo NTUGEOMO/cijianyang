@@ -278,13 +278,14 @@
       }
       .bio-grid {
         display: grid;
-        grid-template-columns: minmax(0, 720px);
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
       }
       .bio-grid p {
         color: var(--muted);
       }
       .about-disclosures {
-        margin-top: 52px;
+        margin-top: 0;
         border-top: 1px solid var(--line);
       }
       .about-disclosure {
@@ -315,7 +316,9 @@
         line-height: 1.7;
       }
       .about-contact {
+        margin-top: 52px;
         padding: 28px 0 0;
+        border-top: 1px solid var(--line);
       }
       .about-contact-grid p {
         color: var(--muted);
@@ -3051,204 +3054,203 @@
                 >
               </div>
             </div>
+            <div class="about-disclosures">
+              <details class="about-disclosure" id="career">
+                <summary data-zh="學經歷" data-en="Education &amp; experience">
+                  學經歷
+                </summary>
+                <div class="about-disclosure-content">
+                  <div class="timeline">
+                    <article>
+                      <small>2023 — PRESENT</small>
+                      <h3
+                        data-zh="國立臺灣大學 · 助理教授"
+                        data-en="National Taiwan University · Assistant Professor"
+                      >
+                        國立臺灣大學 · 助理教授
+                      </h3>
+                      <p
+                        data-zh="地理環境資源學系"
+                        data-en="Department of Geography"
+                      >
+                        地理環境資源學系
+                      </p>
+                    </article>
+                    <article>
+                      <small>2021 — 2023</small>
+                      <h3
+                        data-zh="德國地球科學研究中心 · 博士後研究員"
+                        data-en="GFZ Potsdam · Postdoctoral Fellow"
+                      >
+                        德國地球科學研究中心 · 博士後研究員
+                      </h3>
+                      <p>German Research Centre for Geosciences</p>
+                    </article>
+                    <article>
+                      <small>2020 — 2021</small>
+                      <h3
+                        data-zh="國立臺灣大學 · 博士後研究員"
+                        data-en="National Taiwan University · Postdoctoral Fellow"
+                      >
+                        國立臺灣大學 · 博士後研究員
+                      </h3>
+                    </article>
+                    <article>
+                      <small>2020</small>
+                      <h3
+                        data-zh="國立臺灣大學 · 地理學博士"
+                        data-en="National Taiwan University · Ph.D. in Geography"
+                      >
+                        國立臺灣大學 · 地理學博士
+                      </h3>
+                    </article>
+                  </div>
+                </div>
+              </details>
+              <details class="about-disclosure" id="service">
+                <summary
+                  data-zh="榮譽與學術活動"
+                  data-en="Honors &amp; academic activities"
+                >
+                  榮譽與學術活動
+                </summary>
+                <div class="about-disclosure-content">
+                  <h3 data-zh="獎項與榮譽" data-en="Awards &amp; honors">
+                    獎項與榮譽
+                  </h3>
+                  <ul>
+                    <li>2026 教學優良教師, National Taiwan University</li>
+                    <li>2026 優良論文獎, National Taiwan University</li>
+                    <li>
+                      2025 Outstanding Thesis, Annual Meeting of the Geological
+                      and Geophysical Society
+                    </li>
+                    <li>
+                      2024-2025 Top-Tier Talent Cultivation and Foundational
+                      Development Fund Grant
+                    </li>
+                    <li>
+                      2023-2026 National Taiwan University Incentives for Newly
+                      Hired Exceptional Talent
+                    </li>
+                    <li>2020 Vei-Chow Juan Thesis Award</li>
+                    <li>
+                      2019 Outstanding Thesis, Taiwan Geosciences Assembly
+                    </li>
+                    <li>
+                      2018 Outstanding Thesis, Annual Meeting of Geological and
+                      Geophysical Society
+                    </li>
+                    <li>2017 Excellent Teaching Assistant Award</li>
+                    <li>2016 Excellent Teaching Assistant Award</li>
+                    <li>2015 Excellent Teaching Assistant Award</li>
+                    <li>
+                      2014 Distinguished Academic Record (Top 5%), National
+                      Taiwan University
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="about-disclosure" id="talks">
+                <summary data-zh="受邀演講" data-en="Invited talks">
+                  受邀演講
+                </summary>
+                <div class="about-disclosure-content">
+                  <ul>
+                    <li>
+                      2025 Exploring Dynamic Landscapes through Digital Terrains
+                      and High-Quality Field Observations, Universitas Gadjah
+                      Mada, Indonesia.
+                    </li>
+                    <li>
+                      2025 惡地地形特徵圖製作-以牛埔水土保持教室為例.
+                      農業部農村發展與水土保持署
+                    </li>
+                    <li>
+                      2025 Dynamic Landscapes: Perspectives from Digital Terrain
+                      Analysis and High-Quality Field Observation, National
+                      Taiwan Normal University.
+                    </li>
+                    <li>
+                      2025 Taiwanese Badland Landscapes, Geological Park Society
+                      of Taiwan.
+                    </li>
+                    <li>
+                      2024 From Gullies to Drainage Divide Migration, Department
+                      of Civil Engineering, National Taiwan University.
+                    </li>
+                    <li>
+                      2023 Taiwanese Badlands, International Geographical Union.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="about-disclosure" id="fellowships">
+                <summary data-zh="研究獎助" data-en="Fellowships">
+                  研究獎助
+                </summary>
+                <div class="about-disclosure-content">
+                  <ul>
+                    <li>
+                      2021–2022 MOST Recruiting Postdoctoral Fellowship, hosted
+                      by GFZ Potsdam
+                    </li>
+                    <li>
+                      2020–2021 MOST Recruiting Postdoctoral Fellowship, hosted
+                      by National Taiwan University
+                    </li>
+                    <li>
+                      2018–2019 Graduate Students Study Abroad Program, Ministry
+                      of Science and Technology, Taiwan
+                    </li>
+                    <li>
+                      2011–2012 College Student Research Scholarship, Ministry
+                      of Science and Technology, Taiwan
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="about-disclosure" id="memberships">
+                <summary data-zh="學會會員" data-en="Society memberships">
+                  學會會員
+                </summary>
+                <div class="about-disclosure-content">
+                  <ul>
+                    <li>European Geosciences Union (EGU)</li>
+                    <li>American Geophysical Union (AGU)</li>
+                    <li>Geographical Society of China</li>
+                    <li>Geological Park Society of Taiwan</li>
+                    <li>International Association of Geomorphologists (IAG)</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
           </div>
-          <div class="about-disclosures">
-            <details class="about-disclosure" id="career">
-              <summary data-zh="學經歷" data-en="Education &amp; experience">
-                學經歷
-              </summary>
-              <div class="about-disclosure-content">
-                <div class="timeline">
-                  <article>
-                    <small>2023 — PRESENT</small>
-                    <h3
-                      data-zh="國立臺灣大學 · 助理教授"
-                      data-en="National Taiwan University · Assistant Professor"
-                    >
-                      國立臺灣大學 · 助理教授
-                    </h3>
-                    <p
-                      data-zh="地理環境資源學系"
-                      data-en="Department of Geography"
-                    >
-                      地理環境資源學系
-                    </p>
-                  </article>
-                  <article>
-                    <small>2021 — 2023</small>
-                    <h3
-                      data-zh="德國地球科學研究中心 · 博士後研究員"
-                      data-en="GFZ Potsdam · Postdoctoral Fellow"
-                    >
-                      德國地球科學研究中心 · 博士後研究員
-                    </h3>
-                    <p>German Research Centre for Geosciences</p>
-                  </article>
-                  <article>
-                    <small>2020 — 2021</small>
-                    <h3
-                      data-zh="國立臺灣大學 · 博士後研究員"
-                      data-en="National Taiwan University · Postdoctoral Fellow"
-                    >
-                      國立臺灣大學 · 博士後研究員
-                    </h3>
-                  </article>
-                  <article>
-                    <small>2020</small>
-                    <h3
-                      data-zh="國立臺灣大學 · 地理學博士"
-                      data-en="National Taiwan University · Ph.D. in Geography"
-                    >
-                      國立臺灣大學 · 地理學博士
-                    </h3>
-                  </article>
-                </div>
+          <div class="about-contact" id="contact">
+            <h3 data-zh="聯絡與學術交流" data-en="Contact &amp; collaboration">
+              聯絡與學術交流
+            </h3>
+            <div class="about-contact-grid">
+              <div>
+                <p
+                  data-zh="歡迎就地形演育、地表作用與地景恢復研究交流。"
+                  data-en="For academic exchanges on geomorphology, surface processes, and landscape recovery."
+                >
+                  歡迎就地形演育、地表作用與地景恢復研究交流。
+                </p>
+                <a class="email" href="mailto:cijianyang@ntu.edu.tw"
+                  >cijianyang@ntu.edu.tw</a
+                >
               </div>
-            </details>
-            <details class="about-disclosure" id="service">
-              <summary
-                data-zh="榮譽與學術活動"
-                data-en="Honors &amp; academic activities"
-              >
-                榮譽與學術活動
-              </summary>
-              <div class="about-disclosure-content">
-                <h3 data-zh="獎項與榮譽" data-en="Awards &amp; honors">
-                  獎項與榮譽
-                </h3>
-                <ul>
-                  <li>2026 教學優良教師, National Taiwan University</li>
-                  <li>2026 優良論文獎, National Taiwan University</li>
-                  <li>
-                    2025 Outstanding Thesis, Annual Meeting of the Geological
-                    and Geophysical Society
-                  </li>
-                  <li>
-                    2024-2025 Top-Tier Talent Cultivation and Foundational
-                    Development Fund Grant
-                  </li>
-                  <li>
-                    2023-2026 National Taiwan University Incentives for Newly
-                    Hired Exceptional Talent
-                  </li>
-                  <li>2020 Vei-Chow Juan Thesis Award</li>
-                  <li>2019 Outstanding Thesis, Taiwan Geosciences Assembly</li>
-                  <li>
-                    2018 Outstanding Thesis, Annual Meeting of Geological and
-                    Geophysical Society
-                  </li>
-                  <li>2017 Excellent Teaching Assistant Award</li>
-                  <li>2016 Excellent Teaching Assistant Award</li>
-                  <li>2015 Excellent Teaching Assistant Award</li>
-                  <li>
-                    2014 Distinguished Academic Record (Top 5%), National Taiwan
-                    University
-                  </li>
-                </ul>
-              </div>
-            </details>
-            <details class="about-disclosure" id="talks">
-              <summary data-zh="受邀演講" data-en="Invited talks">
-                受邀演講
-              </summary>
-              <div class="about-disclosure-content">
-                <ul>
-                  <li>
-                    2025 Exploring Dynamic Landscapes through Digital Terrains
-                    and High-Quality Field Observations, Universitas Gadjah
-                    Mada, Indonesia.
-                  </li>
-                  <li>
-                    2025 惡地地形特徵圖製作-以牛埔水土保持教室為例.
-                    農業部農村發展與水土保持署
-                  </li>
-                  <li>
-                    2025 Dynamic Landscapes: Perspectives from Digital Terrain
-                    Analysis and High-Quality Field Observation, National Taiwan
-                    Normal University.
-                  </li>
-                  <li>
-                    2025 Taiwanese Badland Landscapes, Geological Park Society
-                    of Taiwan.
-                  </li>
-                  <li>
-                    2024 From Gullies to Drainage Divide Migration, Department
-                    of Civil Engineering, National Taiwan University.
-                  </li>
-                  <li>
-                    2023 Taiwanese Badlands, International Geographical Union.
-                  </li>
-                </ul>
-              </div>
-            </details>
-            <details class="about-disclosure" id="fellowships">
-              <summary data-zh="研究獎助" data-en="Fellowships">
-                研究獎助
-              </summary>
-              <div class="about-disclosure-content">
-                <ul>
-                  <li>
-                    2021–2022 MOST Recruiting Postdoctoral Fellowship, hosted by
-                    GFZ Potsdam
-                  </li>
-                  <li>
-                    2020–2021 MOST Recruiting Postdoctoral Fellowship, hosted by
-                    National Taiwan University
-                  </li>
-                  <li>
-                    2018–2019 Graduate Students Study Abroad Program, Ministry
-                    of Science and Technology, Taiwan
-                  </li>
-                  <li>
-                    2011–2012 College Student Research Scholarship, Ministry of
-                    Science and Technology, Taiwan
-                  </li>
-                </ul>
-              </div>
-            </details>
-            <details class="about-disclosure" id="memberships">
-              <summary data-zh="學會會員" data-en="Society memberships">
-                學會會員
-              </summary>
-              <div class="about-disclosure-content">
-                <ul>
-                  <li>European Geosciences Union (EGU)</li>
-                  <li>American Geophysical Union (AGU)</li>
-                  <li>Geographical Society of China</li>
-                  <li>Geological Park Society of Taiwan</li>
-                  <li>International Association of Geomorphologists (IAG)</li>
-                </ul>
-              </div>
-            </details>
-            <div class="about-contact" id="contact">
-              <h3
-                data-zh="聯絡與學術交流"
-                data-en="Contact &amp; collaboration"
-              >
-                聯絡與學術交流
-              </h3>
-              <div class="about-contact-grid">
-                <div>
-                  <p
-                    data-zh="歡迎就地形演育、地表作用與地景恢復研究交流。"
-                    data-en="For academic exchanges on geomorphology, surface processes, and landscape recovery."
-                  >
-                    歡迎就地形演育、地表作用與地景恢復研究交流。
-                  </p>
-                  <a class="email" href="mailto:cijianyang@ntu.edu.tw"
-                    >cijianyang@ntu.edu.tw</a
-                  >
-                </div>
-                <div class="about-contact-details">
-                  <p
-                    data-zh="國立臺灣大學 地理環境資源學系<br>地理系館 503 室 · 臺北，臺灣"
-                    data-en="Department of Geography, National Taiwan University<br>Room 503 · Taipei, Taiwan"
-                  >
-                    國立臺灣大學 地理環境資源學系<br />地理系館 503 室 ·
-                    臺北，臺灣
-                  </p>
-                  <a href="tel:+886233665830">+886-2-3366-5830</a>
-                </div>
+              <div class="about-contact-details">
+                <p
+                  data-zh="國立臺灣大學 地理環境資源學系<br>地理系館 503 室 · 臺北，臺灣"
+                  data-en="Department of Geography, National Taiwan University<br>Room 503 · Taipei, Taiwan"
+                >
+                  國立臺灣大學 地理環境資源學系<br />地理系館 503 室 ·
+                  臺北，臺灣
+                </p>
+                <a href="tel:+886233665830">+886-2-3366-5830</a>
               </div>
             </div>
           </div>
