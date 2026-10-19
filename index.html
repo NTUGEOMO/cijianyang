@@ -297,27 +297,26 @@
       .about-disclosure-content {
         padding: 4px 0 26px;
       }
-      .about-service-grid,
       .about-contact-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 60px;
       }
-      .about-service-grid h3 {
+      .about-disclosure-content h3,
+      .about-contact h3 {
         font-size: 20px;
         margin: 0 0 20px;
       }
-      .about-service-grid ul {
+      .about-disclosure-content ul {
         padding-left: 20px;
       }
-      .about-service-grid li {
+      .about-disclosure-content li {
         margin-bottom: 13px;
         font-size: 15px;
         line-height: 1.7;
       }
-      .about-service-grid details {
-        border-top: 1px solid var(--line);
-        margin-top: 15px;
+      .about-contact {
+        padding: 28px 0 0;
       }
       .about-contact-grid p {
         color: var(--muted);
@@ -941,7 +940,6 @@
           grid-template-columns: 1fr 1fr;
         }
         .project-grid,
-        .about-service-grid,
         .about-contact-grid {
           grid-template-columns: 1fr;
           gap: 25px;
@@ -3105,126 +3103,122 @@
               >
                 榮譽與學術活動
               </summary>
-              <div class="about-disclosure-content about-service-grid">
-                <div>
-                  <h3 data-zh="獎項與榮譽" data-en="Awards &amp; honors">
-                    獎項與榮譽
-                  </h3>
-                  <ul>
-                    <li>2026 教學優良教師, National Taiwan University</li>
-                    <li>2026 優良論文獎, National Taiwan University</li>
-                    <li>
-                      2025 Outstanding Thesis, Annual Meeting of the Geological
-                      and Geophysical Society
-                    </li>
-                    <li>
-                      2024-2025 Top-Tier Talent Cultivation and Foundational
-                      Development Fund Grant
-                    </li>
-                    <li>
-                      2023-2026 National Taiwan University Incentives for Newly
-                      Hired Exceptional Talent
-                    </li>
-                    <li>2020 Vei-Chow Juan Thesis Award</li>
-                    <li>
-                      2019 Outstanding Thesis, Taiwan Geosciences Assembly
-                    </li>
-                    <li>
-                      2018 Outstanding Thesis, Annual Meeting of Geological and
-                      Geophysical Society
-                    </li>
-                    <li>2017 Excellent Teaching Assistant Award</li>
-                    <li>2016 Excellent Teaching Assistant Award</li>
-                    <li>2015 Excellent Teaching Assistant Award</li>
-                    <li>
-                      2014 Distinguished Academic Record (Top 5%), National
-                      Taiwan University
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <details>
-                    <summary data-zh="受邀演講" data-en="Invited talks">
-                      受邀演講
-                    </summary>
-                    <ul>
-                      <li>
-                        2025 Exploring Dynamic Landscapes through Digital
-                        Terrains and High-Quality Field Observations,
-                        Universitas Gadjah Mada, Indonesia.
-                      </li>
-                      <li>
-                        2025 惡地地形特徵圖製作-以牛埔水土保持教室為例.
-                        農業部農村發展與水土保持署
-                      </li>
-                      <li>
-                        2025 Dynamic Landscapes: Perspectives from Digital
-                        Terrain Analysis and High-Quality Field Observation,
-                        National Taiwan Normal University.
-                      </li>
-                      <li>
-                        2025 Taiwanese Badland Landscapes, Geological Park
-                        Society of Taiwan.
-                      </li>
-                      <li>
-                        2024 From Gullies to Drainage Divide Migration,
-                        Department of Civil Engineering, National Taiwan
-                        University.
-                      </li>
-                      <li>
-                        2023 Taiwanese Badlands, International Geographical
-                        Union.
-                      </li>
-                    </ul>
-                  </details>
-                  <details>
-                    <summary data-zh="研究獎助" data-en="Fellowships">
-                      研究獎助
-                    </summary>
-                    <ul>
-                      <li>
-                        2021–2022 MOST Recruiting Postdoctoral Fellowship,
-                        hosted by GFZ Potsdam
-                      </li>
-                      <li>
-                        2020–2021 MOST Recruiting Postdoctoral Fellowship,
-                        hosted by National Taiwan University
-                      </li>
-                      <li>
-                        2018–2019 Graduate Students Study Abroad Program,
-                        Ministry of Science and Technology, Taiwan
-                      </li>
-                      <li>
-                        2011–2012 College Student Research Scholarship, Ministry
-                        of Science and Technology, Taiwan
-                      </li>
-                    </ul>
-                  </details>
-                  <details>
-                    <summary data-zh="學會會員" data-en="Society memberships">
-                      學會會員
-                    </summary>
-                    <ul>
-                      <li>European Geosciences Union (EGU)</li>
-                      <li>American Geophysical Union (AGU)</li>
-                      <li>Geographical Society of China</li>
-                      <li>Geological Park Society of Taiwan</li>
-                      <li>
-                        International Association of Geomorphologists (IAG)
-                      </li>
-                    </ul>
-                  </details>
-                </div>
+              <div class="about-disclosure-content">
+                <h3 data-zh="獎項與榮譽" data-en="Awards &amp; honors">
+                  獎項與榮譽
+                </h3>
+                <ul>
+                  <li>2026 教學優良教師, National Taiwan University</li>
+                  <li>2026 優良論文獎, National Taiwan University</li>
+                  <li>
+                    2025 Outstanding Thesis, Annual Meeting of the Geological
+                    and Geophysical Society
+                  </li>
+                  <li>
+                    2024-2025 Top-Tier Talent Cultivation and Foundational
+                    Development Fund Grant
+                  </li>
+                  <li>
+                    2023-2026 National Taiwan University Incentives for Newly
+                    Hired Exceptional Talent
+                  </li>
+                  <li>2020 Vei-Chow Juan Thesis Award</li>
+                  <li>2019 Outstanding Thesis, Taiwan Geosciences Assembly</li>
+                  <li>
+                    2018 Outstanding Thesis, Annual Meeting of Geological and
+                    Geophysical Society
+                  </li>
+                  <li>2017 Excellent Teaching Assistant Award</li>
+                  <li>2016 Excellent Teaching Assistant Award</li>
+                  <li>2015 Excellent Teaching Assistant Award</li>
+                  <li>
+                    2014 Distinguished Academic Record (Top 5%), National Taiwan
+                    University
+                  </li>
+                </ul>
               </div>
             </details>
-            <details class="about-disclosure" id="contact">
-              <summary
+            <details class="about-disclosure" id="talks">
+              <summary data-zh="受邀演講" data-en="Invited talks">
+                受邀演講
+              </summary>
+              <div class="about-disclosure-content">
+                <ul>
+                  <li>
+                    2025 Exploring Dynamic Landscapes through Digital Terrains
+                    and High-Quality Field Observations, Universitas Gadjah
+                    Mada, Indonesia.
+                  </li>
+                  <li>
+                    2025 惡地地形特徵圖製作-以牛埔水土保持教室為例.
+                    農業部農村發展與水土保持署
+                  </li>
+                  <li>
+                    2025 Dynamic Landscapes: Perspectives from Digital Terrain
+                    Analysis and High-Quality Field Observation, National Taiwan
+                    Normal University.
+                  </li>
+                  <li>
+                    2025 Taiwanese Badland Landscapes, Geological Park Society
+                    of Taiwan.
+                  </li>
+                  <li>
+                    2024 From Gullies to Drainage Divide Migration, Department
+                    of Civil Engineering, National Taiwan University.
+                  </li>
+                  <li>
+                    2023 Taiwanese Badlands, International Geographical Union.
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="about-disclosure" id="fellowships">
+              <summary data-zh="研究獎助" data-en="Fellowships">
+                研究獎助
+              </summary>
+              <div class="about-disclosure-content">
+                <ul>
+                  <li>
+                    2021–2022 MOST Recruiting Postdoctoral Fellowship, hosted by
+                    GFZ Potsdam
+                  </li>
+                  <li>
+                    2020–2021 MOST Recruiting Postdoctoral Fellowship, hosted by
+                    National Taiwan University
+                  </li>
+                  <li>
+                    2018–2019 Graduate Students Study Abroad Program, Ministry
+                    of Science and Technology, Taiwan
+                  </li>
+                  <li>
+                    2011–2012 College Student Research Scholarship, Ministry of
+                    Science and Technology, Taiwan
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="about-disclosure" id="memberships">
+              <summary data-zh="學會會員" data-en="Society memberships">
+                學會會員
+              </summary>
+              <div class="about-disclosure-content">
+                <ul>
+                  <li>European Geosciences Union (EGU)</li>
+                  <li>American Geophysical Union (AGU)</li>
+                  <li>Geographical Society of China</li>
+                  <li>Geological Park Society of Taiwan</li>
+                  <li>International Association of Geomorphologists (IAG)</li>
+                </ul>
+              </div>
+            </details>
+            <div class="about-contact" id="contact">
+              <h3
                 data-zh="聯絡與學術交流"
                 data-en="Contact &amp; collaboration"
               >
                 聯絡與學術交流
-              </summary>
-              <div class="about-disclosure-content about-contact-grid">
+              </h3>
+              <div class="about-contact-grid">
                 <div>
                   <p
                     data-zh="歡迎就地形演育、地表作用與地景恢復研究交流。"
@@ -3247,7 +3241,7 @@
                   <a href="tel:+886233665830">+886-2-3366-5830</a>
                 </div>
               </div>
-            </details>
+            </div>
           </div>
         </section>
         <section class="teaching" id="teaching">
