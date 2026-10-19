@@ -300,13 +300,7 @@
       .about-disclosure-content {
         padding: 4px 0 26px;
       }
-      .about-contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-      }
-      .about-disclosure-content h3,
-      .about-contact h3 {
+      .about-disclosure-content h3 {
         font-size: 20px;
         margin: 0 0 20px;
       }
@@ -318,23 +312,13 @@
         font-size: 15px;
         line-height: 1.7;
       }
-      .about-contact {
-        margin-top: 52px;
-        padding: 28px 0 0;
-        border-top: 1px solid var(--line);
-      }
-      .about-contact-grid p {
-        color: var(--muted);
-      }
-      .about-contact-grid a {
-        color: var(--blue);
-      }
-      .about-contact-grid .email {
-        font-size: 16px;
-        word-break: break-word;
-      }
-      .about-contact-details {
+      .bio-contact {
         font-size: 15px;
+        line-height: 1.7;
+      }
+      .bio-contact a {
+        color: var(--blue);
+        word-break: break-word;
       }
       .timeline {
         border-left: 1px solid var(--line);
@@ -945,10 +929,8 @@
         .team-grid {
           grid-template-columns: 1fr 1fr;
         }
-        .project-grid,
-        .about-contact-grid {
+        .project-grid {
           grid-template-columns: 1fr;
-          gap: 25px;
         }
         .lab-feature,
         .field-sites {
@@ -3036,6 +3018,18 @@
               >
                 現任國立臺灣大學地理環境資源學系助理教授，研究聚焦地形演育、關鍵帶地表作用與地景韌性。
               </p>
+              <p
+                class="bio-contact"
+                data-zh='歡迎就地形演育、地表作用與地景恢復研究交流。&lt;a href="mailto:cijianyang@ntu.edu.tw"&gt;cijianyang@ntu.edu.tw&lt;/a&gt; · 國立臺灣大學地理環境資源學系 · 地理系館 503 室 · 臺北，臺灣 · &lt;a href="tel:+886233665830"&gt;+886-2-3366-5830&lt;/a&gt;'
+                data-en='For academic exchanges on geomorphology, surface processes, and landscape recovery: &lt;a href="mailto:cijianyang@ntu.edu.tw"&gt;cijianyang@ntu.edu.tw&lt;/a&gt; · Department of Geography, National Taiwan University · Room 503 · Taipei, Taiwan · &lt;a href="tel:+886233665830"&gt;+886-2-3366-5830&lt;/a&gt;'
+              >
+                歡迎就地形演育、地表作用與地景恢復研究交流。<a
+                  href="mailto:cijianyang@ntu.edu.tw"
+                  >cijianyang@ntu.edu.tw</a
+                >
+                · 國立臺灣大學地理環境資源學系 · 地理系館 503 室 · 臺北，臺灣 ·
+                <a href="tel:+886233665830">+886-2-3366-5830</a>
+              </p>
               <div class="links">
                 <a
                   href="https://orcid.org/0000-0002-6951-5593"
@@ -3300,34 +3294,6 @@
                   </ul>
                 </div>
               </details>
-            </div>
-          </div>
-          <div class="about-contact" id="contact">
-            <h3 data-zh="聯絡與學術交流" data-en="Contact &amp; collaboration">
-              聯絡與學術交流
-            </h3>
-            <div class="about-contact-grid">
-              <div>
-                <p
-                  data-zh="歡迎就地形演育、地表作用與地景恢復研究交流。"
-                  data-en="For academic exchanges on geomorphology, surface processes, and landscape recovery."
-                >
-                  歡迎就地形演育、地表作用與地景恢復研究交流。
-                </p>
-                <a class="email" href="mailto:cijianyang@ntu.edu.tw"
-                  >cijianyang@ntu.edu.tw</a
-                >
-              </div>
-              <div class="about-contact-details">
-                <p
-                  data-zh="國立臺灣大學 地理環境資源學系<br>地理系館 503 室 · 臺北，臺灣"
-                  data-en="Department of Geography, National Taiwan University<br>Room 503 · Taipei, Taiwan"
-                >
-                  國立臺灣大學 地理環境資源學系<br />地理系館 503 室 ·
-                  臺北，臺灣
-                </p>
-                <a href="tel:+886233665830">+886-2-3366-5830</a>
-              </div>
             </div>
           </div>
         </section>
